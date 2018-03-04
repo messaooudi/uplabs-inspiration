@@ -1,0 +1,18 @@
+    $avatar-size: 95px;
+    $avatar-translate: 15%;
+    .card {
+        min-width: 247px;
+        .avatar {
+            position: absolute;
+            width: $avatar-size;
+            height: $avatar-size;
+            transform: translateY(-$avatar-translate) translateX(-$avatar-translate);
+        }
+        .card-header {
+            padding-left: $avatar-size;
+            b {
+                display: block;
+                font-variant: small-caps;
+            }
+        }
+    }

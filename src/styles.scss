@@ -1,0 +1,6 @@
+// Clarity Dependency SCSS
+@import "../node_modules/clarity-ui/src/utils/dependencies.clarity"; // Includes light theme
+// Your Application Theme File
+@import "./theme.scss";
+// Clarity Component SCSS
+@import "../node_modules/clarity-ui/src/utils/components.clarity";

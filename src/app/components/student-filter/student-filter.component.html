@@ -1,0 +1,25 @@
+<clr-dropdown>
+    <button type="button" class="btn btn-icon" clrDropdownTrigger>
+            <clr-icon shape="filter"></clr-icon>
+            <clr-icon shape="caret down"></clr-icon>
+    </button>
+    <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+        <label class="dropdown-header">Cycle</label>
+        <clr-checkbox *ngFor="let cycle of cycles" [name]="cycle.value">
+            {{cycle.value}}
+        </clr-checkbox>
+        <div class="dropdown-divider"></div>
+        <label class="dropdown-header">Filiere</label>
+        <clr-checkbox *ngFor="let filiere of filieres" [name]="filiere.value">
+            {{filiere.value}}
+        </clr-checkbox>
+        <div class="dropdown-divider"></div>
+        <label class="dropdown-header">Niveau</label>
+        <clr-checkbox *ngFor="let niveau of niveaux" [name]="niveau.value">
+            {{niveau.value}}
+        </clr-checkbox>
+        <clr-checkbox #niveauChekBox [name]="{id : '0',value : 'ing'}" [id]="'niveau'" [clrChecked]="filter.niveau.indexOf(niveauChekBox.name)==-1" (change)="click(niveauChekBox)">
+            ok
+        </clr-checkbox>
+    </clr-dropdown-menu>
+</clr-dropdown>

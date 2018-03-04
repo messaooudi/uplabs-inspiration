@@ -1,0 +1,25 @@
+:host {
+    div.scroll {
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        border-radius: 8px;
+        div.flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            float: left;
+            button {
+                flex: 0 0 auto;
+                margin: 5px 5px 5px 5px;
+                box-shadow: none;
+                z-index: 2;
+            }
+            button#overlay {
+                position: absolute;
+                z-index: 12;
+                visibility: hidden;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}

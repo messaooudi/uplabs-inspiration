@@ -1,0 +1,7 @@
+<div class="scroll">
+    <div class="flex-container">
+        <button id="overlay" *ngIf="isAnimating" class="btn btn-{{type}}"></button>
+        <button id="item{{index}}" (click)="click(index)" *ngFor="let item of data;let index = index" class="btn btn-{{type}}{{selectedIndex == index?'':'-outline'}}">{{item}}            
+        </button>
+    </div>
+</div>
